@@ -1,0 +1,27 @@
+# Cloudflare Pages project configuration for MakerWire AI.
+#
+# This file is read by:
+#   - `wrangler pages dev dist`  (local Pages + Functions runtime)
+#   - `wrangler pages deploy dist` (direct upload)
+#
+# When you connect the repository in the Cloudflare dashboard instead, set the
+# same AI binding under Settings → Functions → Bindings.
+
+name = "makerwire-ai"
+compatibility_date = "2026-11-01"
+pages_build_output_dir = "dist"
+
+# Workers AI binding, exposed to Functions as `env.AI`.
+# The AI layer is optional: without this binding the app still produces
+# deterministic wiring plans and pin-aware local sketches entirely client-side.
+[ai]
+binding = "AI"
+
+# Non-secret configuration. Override these in the dashboard if you prefer.
+[vars]
+# WORKERS_AI_MODEL = "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+# ALLOWED_ORIGIN = "https://makerwire-ai.pages.dev"
+
+# Secrets are NOT stored here. Set them with:
+#   wrangler pages secret put OPENAI_API_KEY --project-name makerwire-ai
+# or in Settings → Environment variables → Encrypted.
