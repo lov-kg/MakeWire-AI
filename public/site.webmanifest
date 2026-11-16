@@ -1,0 +1,16 @@
+{
+  "name": "MakerWire AI",
+  "short_name": "MakerWire",
+  "description": "Board-aware wiring guides and microcontroller code generation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05080c",
+  "theme_color": "#05080c",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
