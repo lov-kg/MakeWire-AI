@@ -1,0 +1,25 @@
+# dependencies
+node_modules
+.pnpm-store
+
+# build
+dist
+.wrangler
+.worker
+.deploy-dry
+.vercel
+.catalog-build
+.functions-build
+public/catalog
+src/catalog/generated
+
+# local secrets
+.dev.vars
+.env
+.env.*
+!.env.example
+
+# editor / OS
+.DS_Store
+Thumbs.db
+*.local

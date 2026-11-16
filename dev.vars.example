@@ -1,0 +1,19 @@
+# Local server secrets for `wrangler dev`.
+# Copy to `.dev.vars` (git-ignored) and fill in what you need.
+#
+# AI providers are optional: the deterministic wiring engine and local code
+# generator work with none of these set.
+#
+# Gemini (server-side, never exposed to the browser)
+# GEMINI_API_KEY=AIza...
+# GEMINI_MODEL=gemini-2.5-flash
+#
+# OpenAI fallback
+# OPENAI_API_KEY=sk-...
+# OPENAI_MODEL=gpt-4o-mini
+#
+# Workers AI model override (the [ai] binding is declared in wrangler.toml)
+# WORKERS_AI_MODEL=@cf/meta/llama-3.3-70b-instruct-fp8-fast
+#
+# CORS origin for /api responses (defaults to *)
+# ALLOWED_ORIGIN=http://localhost:5173
